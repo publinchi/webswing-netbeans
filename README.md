@@ -10,6 +10,7 @@ Requisitos:
 2. Abrir el navegador web a la siguiente ruta si se tiene docker sobre linux:
 
   localhost:8080
+  
   , si se tiene docker sobre windows utilizar:
   
   192.168.99.100:8080
