@@ -5,12 +5,12 @@ MAINTAINER Publio Estupiñán <publio.estupinan@cobiscorp.com>
 RUN apt-get update && apt-get install -y openjdk-8-jdk xvfb curl unzip
 
 ADD state.xml /tmp/state.xml
-ADD netbeans.sh /tmp/netbeans.sh
 
-RUN chmod +x /tmp/netbeans.sh
-RUN echo 'Installing netbeans'
-RUN /tmp/netbeans.sh --silent --state /tmp/state.xml
-RUN rm -rf /tmp/*
+RUN wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-javase-linux.sh -O /tmp/netbeans.sh -q && \
+    chmod +x /tmp/netbeans.sh && \
+    echo 'Installing netbeans' && \
+    /tmp/netbeans.sh --silent --state /tmp/state.xml && \
+    rm -rf /tmp/*
 
 COPY resources-netbeans /tmp
 
