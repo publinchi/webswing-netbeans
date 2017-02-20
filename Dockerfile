@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER Publio Estupiñán <publio.estupinan@cobiscorp.com>
+MAINTAINER Publio Estupiñán <publinchi@gmail.com>
 
 RUN apt-get update && apt-get install -y openjdk-8-jdk xvfb wget curl unzip
 
