@@ -2,8 +2,6 @@ FROM ubuntu:16.04
 
 MAINTAINER Publio Estupiñán <publio.estupinan@cobiscorp.com>
 
-
-RUN echo 'Acquire::http::Proxy "http://pestupinan:Omega2017@192.168.65.253:8080";' >> /etc/apt/apt.conf
 RUN apt-get update && apt-get install -y openjdk-8-jdk xvfb curl unzip
 
 ADD state.xml /tmp/state.xml
