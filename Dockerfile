@@ -24,6 +24,7 @@ RUN mv /tmp/nbplatform.jar /usr/local/netbeans-8.2/platform/lib/nbplatform.jar &
     mv /tmp/netbeans-ext /usr/local/netbeans-8.2/bin/netbeans-ext && \
     mv /tmp/webswing.config /webswing-2.4/webswing.config && \
     mv /tmp/webswing.sh /webswing-2.4/webswing.sh && \
+    chmod +x /webswing-2.4/webswing.sh && \
     rm -rf /tmp/*
 
 WORKDIR /webswing-2.4
