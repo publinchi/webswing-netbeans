@@ -12,8 +12,9 @@ RUN wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-ja
     /tmp/netbeans.sh --silent --state /tmp/state.xml && \
     rm -rf /tmp/*
 
-RUN curl -s -L https://bitbucket.org/meszarv/webswing/downloads/webswing-2.4-distribution.zip > webswing.zip
-RUN unzip *.zip && rm *.zip
+RUN curl -s -L https://bitbucket.org/meszarv/webswing/downloads/webswing-2.4-distribution.zip > webswing.zip && \
+    unzip *.zip && \ 
+    rm *.zip
 
 COPY resources-webswing /tmp
 COPY resources-netbeans /tmp
