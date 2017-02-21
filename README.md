@@ -16,5 +16,7 @@ Requisitos:
   192.168.99.100:8080
   
 3. Credenciales administrativas:
+
   user: admin
+  
   pass: pwd
