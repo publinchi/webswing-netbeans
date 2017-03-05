@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y openjdk-8-jdk xvfb wget curl unzip
 
 ADD state.xml /tmp/state.xml
 
-RUN wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-javase-linux.sh -O /tmp/netbeans.sh -q && \
+RUN wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-javaee-linux.sh -O /tmp/netbeans.sh -q && \
     chmod +x /tmp/netbeans.sh && \
     echo 'Installing netbeans' && \
     /tmp/netbeans.sh --silent --state /tmp/state.xml && \
